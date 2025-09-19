@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Batch</title>
+  <link rel="stylesheet" href="../Frontend/css/batch.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Batch</h2>
+    <form id="batchForm">
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Batch Name" required />
+      </div>
+      <div class="input-group">
+        <input type="datetime-local" id="intime" required />
+      </div>
+      <div class="input-group">
+        <input type="datetime-local" id="outtime" required />
+      </div>
+      <div class="input-group">
+        <select id="trainerId" required>
+          <option value="">Select Trainer</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <select id="courseId" required>
+          <option value="">Select Course </option>
+        </select>
+      </div>
+      <button type="submit">Create Batch</button>
+    </form>
+    
+  </div>
+
+  
+  <div class="batch-list-container">
+    <h2>All Batches</h2>
+    <div id="batchList" class="batch-list"></div>
+  </div>
+
+  <script src="./javascript/batch.js" defer></script>
+</body>
+</html>
+

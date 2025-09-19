@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Trainer Manager</title>
+  <link rel="stylesheet" href="../Frontend/css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/trainer.css" />
+  <script src="../Frontend/javascript/trainer.js" defer></script>
+
+</head>
+<body>
+
+  <div class="head">
+    <h1>Trainer Manager</h1>
+  </div>
+
+<form id="trainerForm">
+  <div class="input-group">
+    <input type="text" id="name" placeholder="Name" required />
+  </div>
+  <div class="input-group">
+    <input type="email" id="email" placeholder="Email" required />
+  </div>
+  <div class="input-group">
+    <input type="text" id="phone" placeholder="Phone" required />
+  </div>
+  <div class="input-group">
+    <select id="course" required>
+      <option value="" disabled selected>Select Course</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <textarea id="notes" placeholder="Notes" rows="1"></textarea>
+  </div>
+  <button type="submit">Add Trainer</button>
+</form>
+<div id="trainer-list" class="trainer-list-container">
+
+
+
+</body>
