@@ -1,4 +1,4 @@
-const API_URI = "http://localhost:5500/api/course";
+const API_URI = "https://trainer-manager-backend.onrender.com/api/course";
 const token = localStorage.getItem("token");
 
 if (!token) {

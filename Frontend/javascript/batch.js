@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const courseSelect = document.getElementById("courseId");
 
   // ✅ Load Trainers dynamically
-  fetch("http://localhost:5500/api/trainer", {
+  fetch("https://trainer-manager-backend.onrender.com/api/trainer", {
     headers: { Authorization: `Bearer ${token}` }
   })
     .then(res => res.json())
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Error loading trainers:", err));
 
   // ✅ Load Courses dynamically
-  fetch("http://localhost:5500/api/course", {
+  fetch("https://trainer-manager-backend.onrender.com/api/course", {
     headers: { Authorization: `Bearer ${token}` }
   })
     .then(res => res.json())
@@ -54,11 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      let url = "http://localhost:5500/api/batch";
+      let url = "https://trainer-manager-backend.onrender.com/api/batch";
       let method = "POST";
 
       if (editBatchId) {
-        url = `http://localhost:5500/api/batch/${editBatchId}`;
+        url = `https://trainer-manager-backend.onrender.com/api/batch/${editBatchId}`;
         method = "PUT";
       }
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ✅ Load all batches
 async function loadBatches() {
   try {
-    const res = await fetch("http://localhost:5500/api/batch", {
+    const res = await fetch("https://trainer-manager-backend.onrender.com/api/batch", {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -122,7 +122,7 @@ async function loadBatches() {
 // ✅ Edit Batch
 async function editBatch(id) {
   try {
-    const res = await fetch(`http://localhost:5500/api/batch/${id}`, {
+    const res = await fetch(`https://trainer-manager-backend.onrender.com/api/batch/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     if (!res.ok) throw new Error("Failed to fetch batch");
@@ -145,7 +145,7 @@ async function editBatch(id) {
 async function deleteBatch(id) {
   if (!confirm("Delete this batch?")) return;
   try {
-    const res = await fetch(`http://localhost:5500/api/batch/${id}`, {
+    const res = await fetch(`https://trainer-manager-backend.onrender.com/api/batch/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` }
     });

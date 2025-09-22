@@ -1,5 +1,5 @@
-const API_BASE = "http://localhost:5500/api/trainer";
-const COURSE_API = "http://localhost:5500/api/course";
+const API_BASE = "https://trainer-manager-backend.onrender.com/api/trainer";
+const COURSE_API = "https://trainer-manager-backend.onrender.com/api/course";
 const token = localStorage.getItem("token");
 
 if (!token) {

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return alert("Passwords do not match");
     }
 
-    const res = await fetch("http://localhost:5500/api/register", {
+    const res = await fetch("https://trainer-manager-backend.onrender.com/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password })
