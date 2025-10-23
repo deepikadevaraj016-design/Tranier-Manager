@@ -1,5 +1,5 @@
-const API_BASE = "https://trainer-manager-backend.onrender.com/api/trainer";
-const COURSE_API = "https://trainer-manager-backend.onrender.com/api/course";
+const API_BASE = "https://tranier-manager.onrender.com/api/trainer";
+const COURSE_API = "https://tranier-manager.onrender.com/api/course";
 const token = localStorage.getItem("token");
 
 if (!token) {
@@ -158,3 +158,4 @@ window.addEventListener("DOMContentLoaded", () => {
   loadCourses();
   loadTrainers();
 });
+
